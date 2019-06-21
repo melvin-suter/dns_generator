@@ -1,0 +1,14 @@
+domainname : "example.com"
+globalttl : 3600
+soa :
+  refresh : 3600
+  retry : 3600
+  expire : 86400
+  minimum : 300
+modules :
+- example_webserver
+- example_ns
+records :
+- name : "sub"
+  type : "A"
+  value : "4.3.2.1"

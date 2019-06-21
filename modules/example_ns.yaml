@@ -1,0 +1,8 @@
+name : "NameServers"
+records :
+- name : "@"
+  type : "NS"
+  value : "ns1.example.com."
+- name : "@"
+  type : "NS"
+  value : "ns2.example.com."
