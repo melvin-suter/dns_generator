@@ -32,7 +32,7 @@ CONFIG_OUTPUT='/var/named/zones'
 ##############
 def getSerial():
     now=datetime.datetime.now()
-    return now.strftime("%Y%m%d%H%M")
+    return now.strftime("%y%m%d%H%M")
 
 ##############
 # SCRIPT
@@ -101,3 +101,5 @@ for file in os.listdir(CONFIG_DATA):
 
 with open(CONFIG_OUTPUT+'/_global.zone', 'w') as stream:
     stream.write(listString)
+    
+os.system("/bin/systemctl restart named")
